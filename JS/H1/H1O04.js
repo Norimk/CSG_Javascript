@@ -6,10 +6,9 @@ function setup() {
 }
 
 function draw() {
-  // teken de grond
   noStroke();
   fill('wheat');
-  rect(0,350,450,100);
+  rect(0,400,450,450);
   // teken het huis
   strokeWeight(4);
   stroke('darkgrey');
