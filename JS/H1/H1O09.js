@@ -4,24 +4,24 @@ var marge = 20;
 function setup() {
   canvas = createCanvas(1000,300);
   canvas.parent('processing');
-  textFont("Verdana");
-  textSize(letterGrootte);
+  textFont("courier");
+  textSize(25);
   textLeading(1.2*letterGrootte);
   //noLoop();
 }
 
 function draw() {
-  background('orange');
+  background('lightyellow');
   fill('yellow');
   textAlign(LEFT, TOP);
-  text("mouseX:" + mouseX + "\nmouseY:" + mouseY,mouseX,mouseY);
+  text("mouseX:"+round(mouseX) + " mouseY:"+round(mouseY),mouseX,mouseY);
   translate(50,50);
   fill('black');
   text("vensterGrootte:\n" + windowWidth + " x " + windowHeight,0,0);
   text("canvasGrootte:\n " + width + " x " + height,0,120);
   
   translate(500,0);
-  fill('dodgerblue');
+  fill('pink');
   stroke('white');
   strokeWeight(10);
   rect(0,0,400,200);
@@ -30,5 +30,5 @@ function draw() {
   noStroke();
   fill('white');
   textAlign(CENTER, CENTER);
-  text("Deze tekst is erg lang en wordt daarom op meerdere regels weergegeven.",0,0,350,150);
+  text("Deze tekst is erg lang en wordt daarom op meerdere regels weergegeven. hoi ik ben Nori",0,0,350,150);
 }
