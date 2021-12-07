@@ -29,17 +29,13 @@ function draw() {
   y = constrain(y,0,height - 100);
   x = constrain(x,0,width - 100);
 
-  if (y >= 75 && y <= 225) {
+  if (y >= 75 && y <= 225 && x >= 700 && x <= 875) {
     fill('chartreuse');
   }
   else {
     fill('darkkhaki');
   }
 
-  if (x >= 700 && x <= 875) {
-    fill('chartreuse')
-  }
-  
   rect(800,175,75,50);
   
   fill('moccasin');
