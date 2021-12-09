@@ -30,7 +30,7 @@ function draw() {
     aantal++;
   }   
 
-  if (keyIsDown(LEFT_ARROW)) {
+  if (keyIsDown(LEFT_ARROW) && aantal > 1) {
     aantal--;
   }
 }
