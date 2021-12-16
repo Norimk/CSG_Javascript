@@ -2,7 +2,7 @@ function setup() {
   canvas = createCanvas(900,450);
   canvas.parent('processing');
   noLoop();
-  //noStroke();
+  noStroke();
 }
 
 
@@ -17,7 +17,7 @@ function draw() {
 
   push();
 
-
+ 
 
   translate(50,0);
   teamLid();
@@ -29,18 +29,22 @@ function draw() {
 
 
   translate(0,75);
+  teamLid();
+
+
+  function teamLid() {
+    push();
+    fill(255,0,255);
+    ellipse(0,0,40);
+    stroke(4);
+    fill(0);
+    bezier(-10,15,5,0,10,0,15,10);
+    ellipse(-10,-5,10);
+    ellipse(10,-5,10);
+    pop();
+  }
+
 }
 
 
 
-function teamLid() {
-  push();
-  fill(255,0,255);
-  ellipse(0,0,40);
-  stroke(4);
-  fill(0);
-  bezier(-10,15,5,0,10,0,15,10);
-  ellipse(-10,-5,10);
-  ellipse(10,-5,10);
-  pop();
-}
