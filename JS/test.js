@@ -10,27 +10,20 @@ function setup() {
 function draw() {
   background(230);
   translate(0,50);
-  fill('yellow');
-  rect(25,-25,800,50);
-
-
-
-  push();
+  for(var Balk = 0; Balk < 10; Balk ++) {
+    fill('yellow');
+    rect(25,-25,800,50);
+    push();
+    for(var lidNr = 0; lidNr < 16; lidNr ++) {
+      translate(50,0);
+      teamLid();
+    }
+    pop();
+    translate(0,75)
+  }
+}
 
  
-
-  translate(50,0);
-  teamLid();
-
-
-
-  pop();
-
-
-
-  translate(0,75);
-  teamLid();
-
 
   function teamLid() {
     push();
@@ -43,8 +36,5 @@ function draw() {
     ellipse(10,-5,10);
     pop();
   }
-
-}
-
 
 
