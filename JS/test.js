@@ -1,25 +1,46 @@
 function setup() {
-  canvas = createCanvas(450,450);
-  background('pink');
+  canvas = createCanvas(900,450);
   canvas.parent('processing');
-  //noLoop();
+  noLoop();
+  //noStroke();
 }
-function tekenKerk(kleur,kleurRondje){
 
-  fill(kleur);
-  rect(300,175,100,300);
-  fill('DarkSeaGreen');
-  triangle(300,175,400,175,350,75);
-  fill(kleurRondje);
-  ellipse(350,250,50,50);
-}
+
+
 function draw() {
-  noStroke();
-  tekenKerk('lightgreen', 'white');
+  background(230);
+  translate(0,50);
+  fill('yellow');
+  rect(25,-25,800,50);
 
-  translate(-150,0);
-  tekenKerk('white', 'lightgreen');
 
-  translate(-150,0);
-  tekenKerk('lightgreen', 'white');
+
+  push();
+
+
+
+  translate(50,0);
+  teamLid();
+
+
+
+  pop();
+
+
+
+  translate(0,75);
+}
+
+
+
+function teamLid() {
+  push();
+  fill(255,0,255);
+  ellipse(0,0,40);
+  stroke(4);
+  fill(0);
+  bezier(-10,15,5,0,10,0,15,10);
+  ellipse(-10,-5,10);
+  ellipse(10,-5,10);
+  pop();
 }
