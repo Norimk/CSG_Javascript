@@ -1,40 +1,39 @@
+var visX = 2;
+var visY = 1;
+
+
 function setup() {
-  canvas = createCanvas(900,450);
+  canvas = createCanvas(600,400);
   canvas.parent('processing');
-  noLoop();
-  noStroke();
+  frameRate(30);
+  background('lightblue');
 }
 
 
 
 function draw() {
-  background(230);
-  translate(0,50);
-  for(var Balk = 0; Balk < 10; Balk ++) {
+  noStroke();
+  fill('brown');
+  rect(0,350,600,50);
+
+  if(mouseX < 300) {
+    fill('red');
+  }
+  else{
     fill('yellow');
-    rect(25,-25,800,50);
-    push();
-    for(var lidNr = 0; lidNr < 16; lidNr ++) {
-      translate(50,0);
-      teamLid();
+  }
+  visX = visX + 1;
+visY =
+  translate(visX,visY)
+  tekenVis();
+  }
+
+
+
+  function tekenVis() {
+    ellipse(100,100,50);
+    triangle(100,100,50,50, 50,150);
+    if(mouseX < 300) {
+      fill('red');
     }
-    pop();
-    translate(0,75)
   }
-}
-
- 
-
-  function teamLid() {
-    push();
-    fill(255,0,255);
-    ellipse(0,0,40);
-    stroke(4);
-    fill(0);
-    bezier(-10,15,5,0,10,0,15,10);
-    ellipse(-10,-5,10);
-    ellipse(10,-5,10);
-    pop();
-  }
-
-
