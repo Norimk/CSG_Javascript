@@ -15,7 +15,7 @@ function draw() {
       G = random(0,225);
       B = random(0,225);
       
-      fill(R,G,B);
+      fill(B,B,B);
       for (var kolom = 0;kolom < 450;kolom += 50) {
         rect(kolom,rij,50,50);
       }
